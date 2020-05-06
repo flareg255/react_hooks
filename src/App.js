@@ -1,4 +1,5 @@
-import React, { createContext, useState } from 'react';
+import React from 'react';
+
 import './App.css';
 import Counter from './components/Counter';
 import CounterHooks from './components/CounterHooks';
@@ -6,18 +7,16 @@ import FormHook from './components/FormHook';
 import ItemHook from './components/ItemHook';
 import ClassEffect from './components/ClassEffect';
 import EffectHook from './components/EffectHook';
-import MouseEventEffect from './MouseEventEffect';
+import MouseEventEffect from './components/MouseEventEffect';
 import DataFeatch from './components/DataFeatch';
 import DataFetchByid from './components/DataFetchByid';
-import ComponentC from './components/ComponentC';
 import CounterReducer from './components/CounterReducer';
-
-export const UserContext = createContext();
-export const LanguageContext = createContext();
+import WrapComponent from './components/WrapComponent';
+import WrapReducerAxios from './components/WrapReducerAxios';
+import WrapContextComp from './components/WrapContextComp';
+import WrapContextReducerComp from './components/WrapContextReducerComp';
 
 function App() {
-  const [user, setUser] = useState({ name: 'yamada', age: '32'});
-  const [language, setLanguage] = useState('日本語');
 
   return (
     <div className="App">
@@ -30,12 +29,16 @@ function App() {
       <MouseEventEffect />
       <DataFeatch />
       <DataFetchByid />
-      <UserContext.Provider value={user}>
-        <LanguageContext.Provider value={language}>
-          <ComponentC />
-        </LanguageContext.Provider>
-      </UserContext.Provider>
+
+      <WrapContextComp />
+
       <CounterReducer />
+
+      <WrapContextReducerComp />
+
+      <WrapReducerAxios />
+
+      <WrapComponent />
     </div>
   );
 }
