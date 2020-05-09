@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.green{
+  background-color: green;
+  color: black;
+}
+
+.red{
+  background-color: crimson;
+  color: white;
+}

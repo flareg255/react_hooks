@@ -15,6 +15,12 @@ import WrapComponent from './components/WrapComponent';
 import WrapReducerAxios from './components/WrapReducerAxios';
 import WrapContextComp from './components/WrapContextComp';
 import WrapContextReducerComp from './components/WrapContextReducerComp';
+import Check from './components/Check';
+import ForcusInput from './components/ForcusInput';
+import Count2 from './components/Count2';
+import DocTitleUpdateOne from './components/DocTitleUpdateOne';
+import DocTitleUpdateTwo from './components/DocTitleUpdateTwo';
+import Form from './components/Form';
 
 function App() {
 
@@ -39,6 +45,17 @@ function App() {
       <WrapReducerAxios />
 
       <WrapComponent />
+
+      <Check />
+
+      <ForcusInput />
+
+      <Count2 />
+
+      <DocTitleUpdateOne />
+      <DocTitleUpdateTwo />
+
+      <Form />
     </div>
   );
 }
